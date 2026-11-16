@@ -1,0 +1,11 @@
+.bg-card {
+    background-color: beige;
+}
+
+.bg-card-logout {
+    background-color: brown;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}

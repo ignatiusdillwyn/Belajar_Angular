@@ -1,0 +1,17 @@
+<h1>Detail Film #{{movieId}}</h1>
+
+<p>Like counter: {{likeCounter}}</p>
+
+<app-movie-summary
+    [movieId]="movieId"
+    (likeEvent)="onLikeEventHandler($event)"
+/>
+
+<a [routerLink]="'/movies/' + movieId">Detail</a>
+<a [routerLink]="'/movies/' + movieId + '/about'">About</a>
+<a [routerLink]="'/movies/' + movieId + '/cast'">Cast</a>
+
+<button class="btn btn-primary" (click)="onGoToCastHandler()">go to cast</button>
+
+<router-outlet></router-outlet>
+
