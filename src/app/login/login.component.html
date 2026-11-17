@@ -1,0 +1,30 @@
+<p>Login</p>
+<div class="card p-2 m-3">
+    <div class="card-body">
+        <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onLoginHandler()">
+            <div>
+                <label for="email">Email</label>
+                <input type="text" formControlName="email">
+                @if(loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.touched) {
+                    <p class="text-danger">Email Harus Diisi</p>
+                }
+                @if(loginForm.get('email')?.errors?.['email'] && loginForm.get('email')?.touched) {
+                    <p class="text-danger">Email Formatnya Belum Sesuai</p>
+                }
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" formControlName="password">
+                @if(loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched) {
+                    <p class="text-danger">Password Harus Diisi</p>
+                }
+                @if(loginForm.get('password')?.errors?.['minlength'] && loginForm.get('password')?.touched) {
+                    <p class="text-danger">Password Minimal 8 Karakter</p>
+                }
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

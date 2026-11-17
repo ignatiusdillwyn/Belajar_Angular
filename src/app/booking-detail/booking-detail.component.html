@@ -1,0 +1,24 @@
+<div class="card">
+    <form [formGroup]="bookingForm" (ngSubmit)="bookingForm.valid && submitForm()">
+        <div>
+            <label for="schedule">Schedule Id</label>
+            <input id="schedule" type="number" formControlName="scheduleId">
+        </div>
+        <div>
+            <label for="seats">Seats Id</label>
+            <input id="seats" type="number" formControlName="seatsId">
+        </div>
+        <div>
+            <label for="totalTickets">Total Tickets</label>
+            <input id="totalTickets" type="number" formControlName="totalTickets">
+        </div>
+        <div>
+            <label for="totalPrice">Total Price</label>
+            <input id="totalPrice" type="number" formControlName="totalPrice">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Book Ticket</button>
+        </div>
+    </form>
+</div>
+ 

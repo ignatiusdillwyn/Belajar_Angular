@@ -3,11 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NgFor, NgIf, NgClass, NgStyle, UpperCasePipe, LowerCasePipe, TitleCasePipe, DatePipe, SlicePipe, CommonModule, DecimalPipe } from '@angular/common';
 import { FilmItemComponent } from './film-item/film-item.component';
+import { DaftarFilmComponent } from './daftar-film/daftar-film.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, FormsModule, FilmItemComponent, NgIf, NgFor, NgClass, NgStyle, UpperCasePipe, DecimalPipe, LowerCasePipe, TitleCasePipe, DatePipe, SlicePipe, CommonModule],
+  imports: [RouterOutlet, RouterLink, FormsModule, DaftarFilmComponent, FilmItemComponent, NgIf, NgFor, NgClass, NgStyle, UpperCasePipe, DecimalPipe, LowerCasePipe, TitleCasePipe, DatePipe, SlicePipe, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

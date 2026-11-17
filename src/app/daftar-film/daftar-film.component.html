@@ -1,0 +1,5 @@
+<ul>
+    @for (film of this.movieSvc.getFilms(); track $index) {
+    <li>{{film.toString()}}</li>
+    }
+</ul>

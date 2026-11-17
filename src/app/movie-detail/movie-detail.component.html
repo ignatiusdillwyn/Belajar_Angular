@@ -1,6 +1,14 @@
-<h1>Detail Film #{{movieId}}</h1>
+<div class="card p-2 m-3">
+    <div class="card-body">
+        <h1>Detail Film #{{movieId}}</h1>
+        <h3>{{movieSchedule?.movieTitle}}</h3>
+        <p>{{movieSchedule?.movieDescription}}</p>
+        <p>Start jam {{ movieSchedule?.startTime | date:'dd MMM yyyy, HH:mm' }}</p>
+    </div>
+</div>
+<!-- Output: Start jam 17 Nov 2026, 19:30 -->
 
-<p>Like counter: {{likeCounter}}</p>
+<!-- <p>Like counter: {{likeCounter}}</p>
 
 <app-movie-summary
     [movieId]="movieId"
@@ -11,7 +19,6 @@
 <a [routerLink]="'/movies/' + movieId + '/about'">About</a>
 <a [routerLink]="'/movies/' + movieId + '/cast'">Cast</a>
 
-<button class="btn btn-primary" (click)="onGoToCastHandler()">go to cast</button>
+<button class="btn btn-primary" (click)="onGoToCastHandler()">go to cast</button> -->
 
-<router-outlet></router-outlet>
-
+<!-- <router-outlet></router-outlet> -->

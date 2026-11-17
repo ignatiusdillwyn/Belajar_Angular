@@ -1,4 +1,7 @@
 <ul>
-    <li><a routerLink="/movies/1">Interstellar</a></li>
-    <li><a routerLink="/movies/2">Inception</a></li>
+    @for (item of movies; track $index) {
+        <li>
+            <a [routerLink]="'/movies/' + item.id">{{item.title}} - {{item.description}}</a>
+        </li>
+    }
 </ul>
